@@ -5,7 +5,7 @@ const path = require("path");
 
 // Get HOMEPAGE
 router.get("/", (req, res) => {
-  res.sendFile("../index.html");
+  res.sendFile("/index.html");
 });
 
 module.exports = router;
