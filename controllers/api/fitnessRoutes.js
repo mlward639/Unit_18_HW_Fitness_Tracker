@@ -2,7 +2,7 @@ const router = require("express").Router();
 const db = require("../../public/models");
 
 // POST a new workout
-router.post("/workouts", ({ body }, res) => {
+router.post("/", ({ body }, res) => {
   db.Workout.aggregate([
     {
       $addFields: {
