@@ -8,11 +8,12 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
-//get EXERCISE page
+//get EXERCISE page to log workouts
 router.get("/exercise", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
 
+//get STATS page
 router.get("/stats", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/stats.html"));
 });

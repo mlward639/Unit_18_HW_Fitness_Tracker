@@ -1,7 +1,6 @@
-//DONT THINK I NEED THIS
-// const router = require("express").Router();
-// const fitnessRoutes = require("./fitnessRoutes");
+const router = require("express").Router();
+const fitnessRoutes = require("./fitnessRoutes");
 
-// router.use("/", fitnessRoutes);
+router.use("/workouts", fitnessRoutes);
 
-// module.exports = router;
+module.exports = router;
