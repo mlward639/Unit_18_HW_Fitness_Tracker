@@ -1,7 +1,5 @@
 # Unit_18_HW_Fitness_Tracker
 
-# Unit-fourteen-homework
-
 <img src='https://img.shields.io/badge/License-MIT-yellow.svg'>
 
 ## Description
@@ -36,6 +34,8 @@ Libraries:
 - MongoDB Atlas to connect database to application
 - Express.js API to handle routes
 - Heroku to deploy
+- Path for relative pathing
+- Morgan for logging
 
 ## Contribution Guidelines
 
@@ -61,12 +61,16 @@ Source for licensing information: <a href="https://opensource.org/licenses/MIT">
 
 ## Screenshots
 
-Screenshot of :
+Screenshot of Last Workout:
 
-<img src='#' alt = 'Screenshot of '>
+<img src='public\assets\images\screenshot-last-workout.png' alt = 'Screenshot of Last Workout'>
+
+Screenshot of Stats Page:
+
+<img src='public\assets\images\screenshot-stats.png' alt = 'Screenshot of Stats Page'>
 
 ## URLs
 
 <a href="https://github.com/mlward639/Unit_18_HW_Fitness_Tracker">Link to GitHub Repository</a>
 
-<a href="#">Link to Deployed Heroku Site</a>
+<a href="https://agile-atoll-06255.herokuapp.com/">Link to Deployed Heroku Site</a>
