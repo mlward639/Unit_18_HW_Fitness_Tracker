@@ -39,7 +39,6 @@ router.put("/:id", (req, res) => {
       $push: {
         exercises: req.body,
       },
-      //add something to update totals for exercise
     },
     {
       new: true,
@@ -61,8 +60,8 @@ router.get("/range", (req, res) => {
         totalDuration: {
           $sum: "$exercises.duration",
         },
-        totalDuration: {
-          $sum: "$exercises.duration",
+        totalWeight: {
+          $sum: "$exercises.weight",
         },
       },
     },
