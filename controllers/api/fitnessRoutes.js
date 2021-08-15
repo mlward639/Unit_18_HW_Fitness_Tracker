@@ -61,6 +61,9 @@ router.get("/range", (req, res) => {
         totalDuration: {
           $sum: "$exercises.duration",
         },
+        totalDuration: {
+          $sum: "$exercises.duration",
+        },
       },
     },
   ])
