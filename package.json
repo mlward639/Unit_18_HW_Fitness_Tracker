@@ -1,6 +1,6 @@
 {
   "name": "mongoose_skeleton",
-  "version": "1.0.0",
+  "version": "v14.17.2",
   "description": "",
   "main": "server.js",
   "scripts": {
