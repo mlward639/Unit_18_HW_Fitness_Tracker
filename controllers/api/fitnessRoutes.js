@@ -3,15 +3,7 @@ const db = require("../../public/models");
 
 // POST a new workout
 router.post("/", ({ body }, res) => {
-  db.Workout.aggregate([
-    {
-      $addFields: {
-        totalDuration: {
-          $sum: "$exercises.duration",
-        },
-      },
-    },
-  ])
+  db.Workout.create(body)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
