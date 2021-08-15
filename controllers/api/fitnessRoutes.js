@@ -14,10 +14,16 @@ router.post("/", ({ body }, res) => {
 
 //GET last workout
 router.get("/", (req, res) => {
-  db.Workout.find({})
-    .sort({ date: -1 })
+  db.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: {
+          $sum: "$exercises.duration",
+        },
+      },
+    },
+  ])
     .then((dbWorkout) => {
-      //can add function for total duration here ***
       res.json(dbWorkout);
     })
     .catch((err) => {
@@ -49,8 +55,17 @@ router.put("/:id", (req, res) => {
 
 //// get workouts in range
 router.get("/range", (req, res) => {
-  db.Workout.find({})
-    .sort({ date: -1 })
+  db.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: {
+          $sum: "$exercises.duration",
+        },
+      },
+    },
+  ])
+    .sort({ day: -1 })
+    .limit(7)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
